@@ -2,12 +2,14 @@ package com.social.eshop.service.dto;
 
 import com.social.eshop.domain.AddressShipping;
 import com.social.eshop.domain.enumeration.Status;
+import com.social.eshop.service.mapper.AutoMapping;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.time.ZonedDateTime;
+import java.util.Set;
 
-public class BucketDTO implements Serializable{
+public class BucketDTO implements AutoMapping, Serializable{
     private String name;
     private ZonedDateTime dateTime;
     private BigDecimal sum;
@@ -16,7 +18,7 @@ public class BucketDTO implements Serializable{
     private int count;
     private String consignmentNote;
     private AddressShipping addressShipping;
-    private ProductsDTO productsDTO;
+    private Set<ProductsDTO> productsDTO;
 
     public BucketDTO() {}
 
@@ -84,11 +86,11 @@ public class BucketDTO implements Serializable{
         this.addressShipping = addressShipping;
     }
 
-    public ProductsDTO getProductsDTO() {
+    public Set<ProductsDTO> getProductsDTO() {
         return productsDTO;
     }
 
-    public void setProductsDTO(ProductsDTO productsDTO) {
+    public void setProductsDTO(Set<ProductsDTO> productsDTO) {
         this.productsDTO = productsDTO;
     }
 

@@ -1,11 +1,12 @@
 package com.social.eshop.service.dto;
 
 import com.social.eshop.domain.Consignment;
+import com.social.eshop.service.mapper.AutoMapping;
 
 import java.io.Serializable;
 import java.util.List;
 
-public class ManagerDTO  implements Serializable {
+public class ManagerDTO  implements AutoMapping, Serializable {
     private List<BucketDTO> buckets;
     private List<ProductsDTO> products;
     private List<CommentsDTO> comments;

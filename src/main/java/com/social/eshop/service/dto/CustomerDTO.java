@@ -1,11 +1,12 @@
 package com.social.eshop.service.dto;
 
 import com.social.eshop.domain.*;
+import com.social.eshop.service.mapper.AutoMapping;
 
 import java.io.Serializable;
 import java.util.List;
 
-public class CustomerDTO  implements Serializable {
+public class CustomerDTO  implements AutoMapping, Serializable {
     private PersonalInformation personalInformation;
     private Avatar avatar;
     private Address address;

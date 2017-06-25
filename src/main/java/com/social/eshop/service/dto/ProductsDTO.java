@@ -3,12 +3,13 @@ package com.social.eshop.service.dto;
 import com.social.eshop.domain.Media;
 import com.social.eshop.domain.Options;
 import com.social.eshop.domain.SubCategory;
+import com.social.eshop.service.mapper.AutoMapping;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.List;
 
-public class ProductsDTO  implements Serializable {
+public class ProductsDTO  implements AutoMapping, Serializable {
     private String name;
     private BigDecimal price;
     private int sale;
