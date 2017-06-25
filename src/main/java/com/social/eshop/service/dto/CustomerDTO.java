@@ -67,4 +67,6 @@ public class CustomerDTO  implements AutoMapping, Serializable {
             ", seens=" + seens +
             '}';
     }
+
+
 }
